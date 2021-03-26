@@ -22,4 +22,12 @@ Customers are one of the most important factors in the growth of the company. Th
 
 
 ## Exploratory Data Analysis 
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
+
+# Comparison between Senior Citizen and Churn
+![Comparison between Senior Citizen and Churn](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output1.png)
+# Comparison between Churn and gender 
+![Comparison between Churn and gender ](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output2.png)
+
+# Comparison between tenure and churn
+![Comparison between tenure and churn](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output3.png)<br>
+Customers are one of the most important factors in the growth of the company. The knowledge of customer's needs is essential to make a profitable and sustainable company. Hence, The process to analyze customer needs retention plays a significant part in improving the company's growth, protects loyal customers, and improve its customer relationship management (CRM). We will build an end-to-end Machine Learning Project to analyze the telco industry based on the fictional dataset provided by IBM by using pyspark in the free community edition of Databricks. This Telco churn dataset contains a fictional telco company that provided home phone and internet services to 7034 customers in California. The dataset consists of information about the customers who left, stayed, and sign up within the last month, demographic info about the customers' age range, gender, and customer account information that we will see in through Exploratory Data Analysis.
