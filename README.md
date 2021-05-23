@@ -1,6 +1,25 @@
 # Implementing the Customer Churn Analysis in Telco Industry to improving Customer retention using Pyspark in Databricks Analytics - Milestone Report
 ***
-This project is a part of my journey learning pyspark and how databricks can be useful for Deploying Machine Learning Algorithms in the Cloud. I use [IBM dataset](https://community.ibm.com/community/user/businessanalytics/blogs/steven-macko/2019/07/11/telco-customer-churn-1113) for exploring the dataset, doing exploratory data analysis and implement Machine learning algorithms to derive actionable insights.
+## About This Kernel
+***
+
+*This kernel is a part of my journey learning pyspark and how databricks can be useful for Deploying Machine Learning Algorithms in the Cloud.I use [IBM dataset](https://community.ibm.com/community/user/businessanalytics/blogs/steven-macko/2019/07/11/telco-customer-churn-1113) for exploring the dataset, doing exploratory data analysis and implement Machine learning algorithms to derive actionable insights. If there are any suggestions/changes you would like to see in the Kernel please let me know :). Appreciate every ounce of help!
+
+*This notebook will always be a work in progress. Please leave any comments about further improvements to the notebook! Any feedback or constructive criticism is greatly appreciated!.
+
+## Business Problem
+***
+*Telco Company wants to know whether the customer will be churn or not that contribute to the retention of Customers in using the service of the company.*
+
+## Client
+***
+*Customers of telco company using IBM Dataset*
+
+## Objective
+***
+*My goal is to understand what factors contribute most to customers who likely to Churn and create a model that can predict if a certain customers will use the service or not(Churn).*
+
+
 
 #### -- Project Status: [Active]
 <img src="https://static1.squarespace.com/static/5144a1bde4b033f38036b7b9/t/56ab72ebbe7b96fafe9303f5/1454076676264/"/>
@@ -20,6 +39,7 @@ Customers are one of the most important factors in the growth of the company. Th
 * Pandas, matplotlib
 * HTML
 * Pyspark
+
 
 
 ## Exploratory Data Analysis 
