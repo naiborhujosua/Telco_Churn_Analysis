@@ -434,12 +434,64 @@ print("Accuracy: {}n\nFPR: {}\nTPR:{}\nF-measure: {}\nPrecision: {}\nRecall: {}\
 ```
 ![Evaluation of Logistic Regression Results](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output5.png)
 
-![ROC graph](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output5.png)
+```python
+#Check the threshold the probability between churn and not Churn by comparing the TPR and False Positive Rate. We can see that 0.18 is the best threshold based on the graph
+display(lrModel,trainDF,"ROC")
+```
+![ROC graph](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output6.png)
 
-
-## Logistic Regression V.S. Random Forest V.S. Decision Tree V.S. AdaBoost Model
+# 4g. Examine the test data to measure the successfull rate of prediction(Churn)
 ***
 
+```python
+#Examine the model using test data
+from pyspark.ml.evaluation import BinaryClassificationEvaluator
+predictions = lrModel.transform(testDF)
+evaluatorLR = BinaryClassificationEvaluator(rawPredictionCol="prediction")
+area_under_curve = evaluatorLR.evaluate(predictions)
+
+#default evaluation is areaUnderROC
+print("areaUnderROC = {}".format(area_under_curve))
+evaluatorLR.getMetricName()
+## Logistic Regression V.S. Random Forest V.S. Decision Tree V.S. AdaBoost Model
+***
+```
+
+```python
+from pyspark.mllib.evaluation import BinaryClassificationMetrics
+
+results = predictions.select(['prediction', 'label'])
+ 
+## prepare score-label set
+results_collect = results.collect()
+results_list = [(float(pred_label[0]), float(pred_label[1])) for pred_label in results_collect]
+predictionAndLabels = sc.parallelize(results_list)
+ 
+metrics = BinaryClassificationMetrics(predictionAndLabels)
+
+# Area under precision-recall curve
+print("Area under PR ={}".format( metrics.areaUnderPR))
+
+# Area under ROC curve
+print("Area under ROC ={}".format(metrics.areaUnderROC))
+```
+# 4h. Implement Confusion Matrix
+***
+```python 
+count=predictions.count()
+correct = results.filter(results.prediction == results.label).count()
+wrong = results.filter(results.prediction != results.label).count()
+tp = results.filter(results.prediction == 1.0).filter(results.prediction == results.label).count()
+fp = results.filter(results.prediction == 1.0).filter(results.prediction != results.label).count()
+fn = results.filter(results.prediction == 0.0).filter(results.prediction != results.label).count()
+tn = results.filter(results.prediction == 0.0).filter(results.prediction == results.label).count()
+
+accuracy = (tp+tn)/count
+precision = tp/(tp+fp)
+recall = tp/(tp+fn)
+
+print("Correct:{}\nWrong:{}\ntp:{}\nfp:{}\nfn:{}\ntn:{}\nAccuracy: {}\nPrecision: {}\nRecall: {}".format(correct, wrong, tp, fp, fn, tn, accuracy, precision, recall))
+```
 # Interpretation
 ***
 <img src="http://www.goldbeck.com/hrblog/wp-content/uploads/2015/11/giphy-3.gif"/>
