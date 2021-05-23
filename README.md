@@ -398,7 +398,11 @@ pipelineModel =pipeline.fit(train_data)
 trainDF =pipelineModel.transform(train_data)
 testDF =pipelineModel.transform(test_data)
 ```
- # 4e. Logistic Regression V.S. Random Forest V.S. Gradient Boosting Model
+
+
+<img src="https://static1.squarespace.com/static/5144a1bde4b033f38036b7b9/t/56714b05c647ad9f555348fa/1450265419456/PresentWIP.gif?format=500w"/>
+
+# 4e. Logistic Regression V.S. Random Forest V.S. Gradient Boosting Model
 ***
 ```python
 #Implement Machine learning algorithm for classification
@@ -418,7 +422,8 @@ print("Intercept: {}".format(lrModel.intercept))
 summary = lrModel.summary
 ```
 
- # 4f. Evaluate the performance of ML Algorithms
+
+# 4f. Evaluate the performance of ML Algorithms
 ***
 
 ```python
@@ -561,9 +566,33 @@ print("Correct:{}\nWrong:{}\ntp:{}\nfp:{}\nfn:{}\ntn:{}\nAccuracy: {}\nPrecision
 ```
 ![Confussion Matrix](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output9.png)
 
-
-# Interpretation
+## Potential Solution
 ***
 <img src="http://www.goldbeck.com/hrblog/wp-content/uploads/2015/11/giphy-3.gif"/>
 
+***
+**Binary Classification**: Churn V.S. No Churn
 
+**Instance Scoring**: Likelihood of customers responding to an Churn to save them from leaving.
+
+**Need for Application**: Save customers rate from Churning
+
+In our employee retention problem, rather than simply predicting whether an employee will leave the company within a certain time frame, we would much rather have an estimate of the probability that he/she will leave the company. 
+We would rank employees by their probability of leaving, then allocate a limited incentive budget to the highest probability instances. 
+
+Consider employee turnover domain where an employee is given treatment by Human  Resources because they think the employee will leave the company within a month, but the employee actually does not. This is a false positive. This mistake could be expensive, inconvenient, and time consuming for both the Human Resources and employee, but is a good investment for relational growth. 
+
+Compare this with the opposite error, where Human Resources does not give treatment/incentives to the employees and they do leave. This is a false negative. This type of error is more detrimental because the company lost an employee, which could lead to great setbacks and more money to rehire. 
+Depending on these errors, different costs are weighed based on the type of employee being treated. For example, if it’s a high-salary employee then would we need a costlier form of treatment? What if it’s a low-salary employee? The cost for each error is different and should be weighed accordingly. 
+ 
+ **Solution 1:** 
+ - We can rank employees by their probability of leaving, then allocate a limited incentive budget to the highest probability instances.
+ - OR, we can allocate our incentive budget to the instances with the highest expected loss, for which we'll need the probability of turnover.
+
+**Solution 2:** 
+Develop learning programs for managers. Then use analytics to gauge their performance and measure progress. Some advice:
+ - Be a good coach
+ - Empower the team and do not micromanage
+ - Express interest for team member success
+ - Have clear vision / strategy for team
+ - Help team with career development    
