@@ -1,4 +1,5 @@
-# Implementing the Customer Churn Analysis in Telco Industry to improving Customer retention using Pyspark in Databricks
+# Implementing the Customer Churn Analysis in Telco Industry to improving Customer retention using Pyspark in Databricks Analytics - Milestone Report
+***
 This project is a part of my journey learning pyspark and how databricks can be useful for Deploying Machine Learning Algorithms in the Cloud. I use [IBM dataset](https://community.ibm.com/community/user/businessanalytics/blogs/steven-macko/2019/07/11/telco-customer-churn-1113) for exploring the dataset, doing exploratory data analysis and implement Machine learning algorithms to derive actionable insights.
 
 #### -- Project Status: [Active]
