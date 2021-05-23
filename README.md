@@ -374,7 +374,6 @@ stages +=[label_Idx]
 temp = label_Idx.fit(train_data).transform(train_data)
   
 ```
-
  # 4c. Make the buckets for tenure
 ***
 ```python
@@ -399,7 +398,7 @@ pipelineModel =pipeline.fit(train_data)
 trainDF =pipelineModel.transform(train_data)
 testDF =pipelineModel.transform(test_data)
 ```
- # 4e. Implement Machine Learning Algorithms 
+ # 4e. Logistic Regression V.S. Random Forest V.S. Gradient Boosting Model
 ***
 ```python
 #Implement Machine learning algorithm for classification
@@ -453,8 +452,7 @@ area_under_curve = evaluatorLR.evaluate(predictions)
 #default evaluation is areaUnderROC
 print("areaUnderROC = {}".format(area_under_curve))
 evaluatorLR.getMetricName()
-## Logistic Regression V.S. Random Forest V.S. Decision Tree V.S. AdaBoost Model
-***
+
 ```
 
 ```python
@@ -492,6 +490,43 @@ recall = tp/(tp+fn)
 
 print("Correct:{}\nWrong:{}\ntp:{}\nfp:{}\nfn:{}\ntn:{}\nAccuracy: {}\nPrecision: {}\nRecall: {}".format(correct, wrong, tp, fp, fn, tn, accuracy, precision, recall))
 ```
+![Confussion Matrix](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output7.png)
+
+# 5a. Implement Random Forest Algorithms
+***
+```python 
+#Implement another Classification ML algorithms
+from pyspark.ml.classification import RandomForestClassifier
+
+rf = RandomForestClassifier(labelCol="label", featuresCol="features").setImpurity("gini").setMaxDepth(6).setNumTrees(50).setFeatureSubsetStrategy("auto").setSeed(4500)
+
+rfModel = rf.fit(trainDF)
+```
+
+```python 
+predictions = rfModel.transform(testDF)
+```
+# 5b. Confussion Matrix
+***
+
+```python 
+results = predictions.select(['prediction', 'label'])
+count=predictions.count()
+correct = results.filter(results.prediction == results.label).count()
+wrong = results.filter(results.prediction != results.label).count()
+tp = results.filter(results.prediction == 1.0).filter(results.prediction == results.label).count()
+fp = results.filter(results.prediction == 1.0).filter(results.prediction != results.label).count()
+fn = results.filter(results.prediction == 0.0).filter(results.prediction != results.label).count()
+tn = results.filter(results.prediction == 0.0).filter(results.prediction == results.label).count()
+
+accuracy = (tp+tn)/count
+precision = tp/(tp+fp)
+recall = tp/(tp+fn)
+
+print("Correct:{}\nWrong:{}\ntp:{}\nfp:{}\nfn:{}\ntn:{}\nAccuracy: {}\nPrecision: {}\nRecall: {}".format(correct, wrong, tp, fp, fn, tn, accuracy, precision, recall))
+```
+
+
 # Interpretation
 ***
 <img src="http://www.goldbeck.com/hrblog/wp-content/uploads/2015/11/giphy-3.gif"/>
