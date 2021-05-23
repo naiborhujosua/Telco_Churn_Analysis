@@ -525,6 +525,41 @@ recall = tp/(tp+fn)
 
 print("Correct:{}\nWrong:{}\ntp:{}\nfp:{}\nfn:{}\ntn:{}\nAccuracy: {}\nPrecision: {}\nRecall: {}".format(correct, wrong, tp, fp, fn, tn, accuracy, precision, recall))
 ```
+![Confussion Matrix](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output8.png)
+
+
+# 6a. Implement Naive Bayes  Algorithms
+***
+```python 
+#Implement another Classification ML algorithms
+from pyspark.ml.classification import NaiveBayes
+nb = NaiveBayes(smoothing=1.0, modelType="multinomial")
+nbModel =nb.fit(trainDF)
+```
+
+```python 
+predictions = nbModel.transform(testDF)
+```
+# 6b. Confussion Matrix
+***
+
+```python 
+results = predictions.select(['prediction', 'label'])
+count=predictions.count()
+correct = results.filter(results.prediction == results.label).count()
+wrong = results.filter(results.prediction != results.label).count()
+tp = results.filter(results.prediction == 1.0).filter(results.prediction == results.label).count()
+fp = results.filter(results.prediction == 1.0).filter(results.prediction != results.label).count()
+fn = results.filter(results.prediction == 0.0).filter(results.prediction != results.label).count()
+tn = results.filter(results.prediction == 0.0).filter(results.prediction == results.label).count()
+
+accuracy = (tp+tn)/count
+precision = tp/(tp+fp)
+recall = tp/(tp+fn)
+
+print("Correct:{}\nWrong:{}\ntp:{}\nfp:{}\nfn:{}\ntn:{}\nAccuracy: {}\nPrecision: {}\nRecall: {}".format(correct, wrong, tp, fp, fn, tn, accuracy, precision, recall))
+```
+![Confussion Matrix](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output8.png)
 
 
 # Interpretation
