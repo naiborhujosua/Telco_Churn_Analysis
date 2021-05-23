@@ -575,7 +575,7 @@ print("Correct:{}\nWrong:{}\ntp:{}\nfp:{}\nfn:{}\ntn:{}\nAccuracy: {}\nPrecision
 ***
 **Binary Classification**: Churn V.S. No Churn
 
-**Instance Scoring**: Likelihood of customers responding to an Churn to save them from leaving.
+**Instance Scoring**: Likelihood of customers responding to a Churn to save them from leaving.
 
 **Need for Application**: Save customers rate from Churning
 
