@@ -579,22 +579,7 @@ print("Correct:{}\nWrong:{}\ntp:{}\nfp:{}\nfn:{}\ntn:{}\nAccuracy: {}\nPrecision
 
 **Need for Application**: Save customers rate from Churning
 
-In our employee retention problem, rather than simply predicting whether an employee will leave the company within a certain time frame, we would much rather have an estimate of the probability that he/she will leave the company. 
-We would rank employees by their probability of leaving, then allocate a limited incentive budget to the highest probability instances. 
+In our employee retention problem, rather than simply predicting whether an customers will likely to churn within a certain time frame, we would much rather have an estimate of the probability that customers will likely to churn. 
+We would give incentives to the senior Citizen customers who are loyal in order to reduce churn rate. In addition to that, It is a good chance to improve customer service experiences by using social media specialist or chatbot for improving customer service experiences. 
 
-Consider employee turnover domain where an employee is given treatment by Human  Resources because they think the employee will leave the company within a month, but the employee actually does not. This is a false positive. This mistake could be expensive, inconvenient, and time consuming for both the Human Resources and employee, but is a good investment for relational growth. 
-
-Compare this with the opposite error, where Human Resources does not give treatment/incentives to the employees and they do leave. This is a false negative. This type of error is more detrimental because the company lost an employee, which could lead to great setbacks and more money to rehire. 
-Depending on these errors, different costs are weighed based on the type of employee being treated. For example, if it’s a high-salary employee then would we need a costlier form of treatment? What if it’s a low-salary employee? The cost for each error is different and should be weighed accordingly. 
- 
- **Solution 1:** 
- - We can rank employees by their probability of leaving, then allocate a limited incentive budget to the highest probability instances.
- - OR, we can allocate our incentive budget to the instances with the highest expected loss, for which we'll need the probability of turnover.
-
-**Solution 2:** 
-Develop learning programs for managers. Then use analytics to gauge their performance and measure progress. Some advice:
- - Be a good coach
- - Empower the team and do not micromanage
- - Express interest for team member success
- - Have clear vision / strategy for team
- - Help team with career development    
+  
