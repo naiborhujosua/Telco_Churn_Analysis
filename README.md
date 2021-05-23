@@ -559,7 +559,7 @@ recall = tp/(tp+fn)
 
 print("Correct:{}\nWrong:{}\ntp:{}\nfp:{}\nfn:{}\ntn:{}\nAccuracy: {}\nPrecision: {}\nRecall: {}".format(correct, wrong, tp, fp, fn, tn, accuracy, precision, recall))
 ```
-![Confussion Matrix](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output8.png)
+![Confussion Matrix](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output9.png)
 
 
 # Interpretation
