@@ -432,6 +432,10 @@ recall = summary.weightedRecall
 auroc =summary.areaUnderROC
 print("Accuracy: {}n\nFPR: {}\nTPR:{}\nF-measure: {}\nPrecision: {}\nRecall: {}\nAreaUnderROC: {}".format(accuracy, falsePositiveRate, truePositiveRate, fMeasure, precision, recall,auroc))
 ```
+![Evaluation of Logistic Regression Results](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output5.png)
+
+![ROC graph](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output5.png)
+
 
 ## Logistic Regression V.S. Random Forest V.S. Decision Tree V.S. AdaBoost Model
 ***
