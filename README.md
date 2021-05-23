@@ -21,9 +21,11 @@
 
 
 
-#### -- Project Status: [Active]
+### Project Status: [Active]
 <img src="https://static1.squarespace.com/static/5144a1bde4b033f38036b7b9/t/56ab72ebbe7b96fafe9303f5/1454076676264/"/>
-## Project Intro/Objective</br>
+
+## Project Intro/Objective
+
 Customers are one of the most important factors in the growth of the company. The knowledge of customer's needs is essential to make a profitable and sustainable company. Hence, The process to analyze customer needs retention plays a significant part in improving the company's growth, protects loyal customers, and improve its customer relationship management (CRM). We will build an end-to-end Machine Learning Project to analyze the telco industry based on the fictional dataset provided by IBM by using pyspark in the free community edition of Databricks. This Telco churn dataset contains a fictional telco company that provided home phone and internet services to 7034 customers in California. The dataset consists of information about the customers who left, stayed, and sign up within the last month, demographic info about the customers' age range, gender, and customer account information that we will see in through Exploratory Data Analysis.
 
 ### Methods Used
