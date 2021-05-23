@@ -22,7 +22,8 @@ Customers are one of the most important factors in the growth of the company. Th
 
 
 ## Exploratory Data Analysis 
-
+# Comparison between Tenure and Total Charges
+![Comparison between Tenure and Total Charges](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output0.jpeg)
 # Comparison between Senior Citizen and Churn
 ![Comparison between Senior Citizen and Churn](https://github.com/naiborhujosua/Telco_Churn_Analysis/blob/main/output1.png)
 # Comparison between Churn and gender 
