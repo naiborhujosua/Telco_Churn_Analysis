@@ -57,7 +57,7 @@ Customers are one of the most important factors in the growth of the company. Th
 
 5. **Interpreting** the data is last. With all the results and analysis of the data, What are the conclusions?What factors that contribute the most about customers who likely to Churn?
 
-**Note:** *The data was found from the “IBM Business Analytics Community” dataset provided by IBM’s website. https://community.ibm.com/community/user/businessanalytics/blogs/steven-macko/2019/07/11/telco-customer-churn-1113 *
+**Note:** *The data was found from the “IBM Business Analytics Community” dataset provided by [IBM's dataset](https://community.ibm.com/community/user/businessanalytics/blogs/steven-macko/2019/07/11/telco-customer-churn-1113)
 
 **Note:** THIS DATASET IS **SIMULATED**.
 
