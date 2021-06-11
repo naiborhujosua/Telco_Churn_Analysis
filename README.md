@@ -579,7 +579,7 @@ print("Correct:{}\nWrong:{}\ntp:{}\nfp:{}\nfn:{}\ntn:{}\nAccuracy: {}\nPrecision
 
 **Need for Application**: Save customers rate from Churning
 
-In our customer retention problem, rather than simply predicting whether an customers will likely to churn within a certain time frame, we would much rather have an estimate of the probability that customers will likely to churn. 
+In our customer retention problem, rather than simply predicting whether customers will likely to churn within a certain time frame, we would much rather have an estimate of the probability that customers will likely to churn. 
 We would give incentives to the senior Citizen customers who are loyal in order to reduce churn rate. In addition to that, It is a good chance to improve customer service experiences by using social media specialist or chatbot for improving customer service experiences. 
 
   
